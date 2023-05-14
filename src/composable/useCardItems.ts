@@ -1,37 +1,33 @@
 import { reactive, ref, watch } from 'vue'
-import type { Card } from '@/mocks/cards'
-import { cards } from '@/mocks/cards'
+import { cards } from '@/mocks/cards/cards'
 import { v4 as uuidv4 } from 'uuid'
+import type { Card } from '@/mocks/cards/types'
 
-const cardItems = reactive<Card[]>([])
-
+const cardItemList = reactive<Card[]>([])
 const validationCards = reactive<Card[]>([])
-let currentCards = reactive(<Card>{})
-const countFounded = ref(0)
+const countCardsFound = ref(0)
 
 watch(
-  () => cardItems,
+  () => cardItemList,
   (newValue) => {
-    countFounded.value = newValue.filter((card) => card.isFound).length
+    countCardsFound.value = newValue.filter((card) => card.isFound).length
   },
   { deep: true }
 )
 
 const shuffleCards = () => {
-  cardItems.length = 0
+  cardItemList.length = 0
   ;[...cards, ...cards]
     .sort(() => Math.random() - 0.5)
     .forEach((card) => {
       const currentItem: Card = { ...card, id: uuidv4() }
-      cardItems.push(currentItem)
+      cardItemList.push(currentItem)
     })
 
   setTimeout(() => {
-    cardItems.forEach((card) => (card.isFlipped = false))
+    cardItemList.forEach((card) => (card.isFlipped = false))
   }, 3500)
 }
-
-const setCurrentCards = (items: Card): Card => (currentCards = items)
 
 const validateTwoCurrentCard = (item: Card): void => {
   validationCards.push(item)
@@ -50,11 +46,8 @@ const validateTwoCurrentCard = (item: Card): void => {
 }
 
 export default {
-  cardItems,
-  countFounded,
+  cardItemList,
+  countCardsFound,
   shuffleCards,
-  validationCards,
-  currentCards,
-  setCurrentCards,
   validateTwoCurrentCard
 }

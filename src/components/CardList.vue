@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import useCardItems from '@/composable/useCardItems'
 import { onMounted, defineEmits } from 'vue'
-import type { Card } from '@/mocks/cards'
-const { cardItems, shuffleCards } = useCardItems
+import type { Card } from "@/mocks/cards/types";
+const { cardItemList, shuffleCards } = useCardItems
 const emit = defineEmits(['selected'])
 
 const selectedCart = (item: Card) => {
@@ -18,7 +18,7 @@ onMounted(() => {
 
 <template>
   <ul>
-    <li v-for="item in cardItems" :key="item.id">
+    <li v-for="item in cardItemList" :key="item.id">
       <div
         class="card"
         :class="{ 'is-flipped': item.isFlipped || item.isFound }"

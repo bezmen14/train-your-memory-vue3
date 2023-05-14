@@ -1,85 +1,79 @@
-export type Card = {
-  title: string
-  id?: string
-  isFound: boolean
-  isFlipped: boolean
-}
+import type { Card } from '@/mocks/cards/types'
 
 export const cards: Card[] = [
   {
     title: 'buffer',
     isFound: false,
-    isFlipped: true,
+    isFlipped: true
   },
   {
     title: 'facebook',
     isFound: false,
-    isFlipped: true,
-
+    isFlipped: true
   },
   {
     title: 'instagram',
     isFound: false,
-    isFlipped: true,
+    isFlipped: true
   },
   {
     title: 'linkedin',
     isFound: false,
-    isFlipped: true,
+    isFlipped: true
   },
   {
     title: 'medium',
     isFound: false,
-    isFlipped: true,
+    isFlipped: true
   },
   {
     title: 'path',
     isFound: false,
-    isFlipped: true,
+    isFlipped: true
   },
   {
     title: 'periscope',
     isFound: false,
-    isFlipped: true,
+    isFlipped: true
   },
   {
     title: 'reddit',
     isFound: false,
-    isFlipped: true,
+    isFlipped: true
   },
   {
     title: 'skype',
     isFound: false,
-    isFlipped: true,
+    isFlipped: true
   },
   {
     title: 'soundcloud',
     isFound: false,
-    isFlipped: true,
+    isFlipped: true
   },
   {
     title: 'spotify',
     isFound: false,
-    isFlipped: true,
+    isFlipped: true
   },
   {
     title: 'tumblr',
     isFound: false,
-    isFlipped: true,
+    isFlipped: true
   },
   {
     title: 'twitter',
     isFound: false,
-    isFlipped: true,
+    isFlipped: true
   },
   {
     title: 'whatsapp',
     isFound: false,
-    isFlipped: true,
+    isFlipped: true
   },
   {
     title: 'youtube',
     isFound: false,
-    isFlipped: true,
+    isFlipped: true
   }
 ]
