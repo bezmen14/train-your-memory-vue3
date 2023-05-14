@@ -2,11 +2,9 @@
 </script>
 
 <template>
-  <header>Тренируй память</header>
+  <h1>Тренируй память</h1>
 </template>
 
 <style scoped>
-header {
-  line-height: 1.5;
-}
+
 </style>
