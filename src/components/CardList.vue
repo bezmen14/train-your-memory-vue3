@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import useCardItems from '@/composable/useCardItems'
 import { onMounted, defineEmits } from 'vue'
-import type { Card } from '@/mocks/cards/cards'
+import type { Card } from '@/mocks/cards'
 const { cardItems, shuffleCards } = useCardItems
 const emit = defineEmits(['selected'])
 

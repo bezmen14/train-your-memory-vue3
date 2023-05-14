@@ -1,6 +1,6 @@
 import { reactive, ref, watch } from 'vue'
-import type { Card } from '@/mocks/cards/cards'
-import { cards } from '@/mocks/cards/cards'
+import type { Card } from '@/mocks/cards'
+import { cards } from '@/mocks/cards'
 import { v4 as uuidv4 } from 'uuid'
 
 const cardItems = reactive<Card[]>([])
@@ -21,13 +21,13 @@ const shuffleCards = () => {
   cardItems.length = 0
   ;[...cards, ...cards]
     .sort(() => Math.random() - 0.5)
-    .forEach((item) => {
-      const currentItem: Card = { ...item, id: uuidv4(), isFlipped: true }
+    .forEach((card) => {
+      const currentItem: Card = { ...card, id: uuidv4() }
       cardItems.push(currentItem)
     })
 
   setTimeout(() => {
-    cardItems.forEach((el) => (el.isFlipped = false))
+    cardItems.forEach((card) => (card.isFlipped = false))
   }, 3500)
 }
 
