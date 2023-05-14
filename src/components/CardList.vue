@@ -1,7 +1,13 @@
 <script setup lang="ts">
 import useCardItems from '@/composable/useCardItems'
+import { onMounted } from 'vue'
 
-const { cardItems } = useCardItems
+const { cardItems, generateRandomItems } = useCardItems
+
+onMounted(() => {
+  generateRandomItems()
+})
+
 </script>
 
 <template>

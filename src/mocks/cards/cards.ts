@@ -1,6 +1,10 @@
-import type { Card } from '@/mocks/cards/type'
+export type Card = {
+  title: string
+  style: { width: string; marginTop?: string }
+  unique?: string
+}
 
-export const cards = <Card[]>[
+export const cards: Card[] = [
   {
     title: 'buffer',
     style: {
@@ -105,6 +109,5 @@ export const cards = <Card[]>[
       width: '80px',
       marginTop: '20px'
     }
-  },
-
+  }
 ]
