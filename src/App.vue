@@ -1,11 +1,15 @@
 <script setup lang="ts">
 import CardList from '@/components/CardList.vue'
+import useCardItems from "@/composable/useCardItems";
+const { countFounded, shuffleCards, validateTwoCurrentCard } = useCardItems
 </script>
 
 <template>
   <div class="container">
     <h1>Тренируй память</h1>
-    <CardList />
+    <p>Совпадений {{`${countFounded / 2} из 15`}}</p>
+    <button @click="shuffleCards">Начать заново</button>
+    <CardList @selected="validateTwoCurrentCard" />
   </div>
 </template>
 

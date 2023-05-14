@@ -1,113 +1,85 @@
 export type Card = {
   title: string
-  style: { width: string; marginTop?: string }
-  unique?: string
+  id?: string
+  isFound: boolean
+  isFlipped: boolean
 }
 
 export const cards: Card[] = [
   {
     title: 'buffer',
-    style: {
-      width: '80px',
-      marginTop: '20px'
-    }
+    isFound: false,
+    isFlipped: false,
   },
   {
     title: 'facebook',
-    style: {
-      width: '80px',
-      marginTop: '20px'
-    }
+    isFound: false,
+    isFlipped: false,
+
   },
   {
     title: 'instagram',
-    style: {
-      width: '80px',
-      marginTop: '20px'
-    }
+    isFound: false,
+    isFlipped: false,
   },
   {
     title: 'linkedin',
-    style: {
-      width: '80px',
-      marginTop: '20px'
-    }
+    isFound: false,
+    isFlipped: false,
   },
   {
     title: 'medium',
-    style: {
-      width: '80px',
-      marginTop: '20px'
-    }
+    isFound: false,
+    isFlipped: false,
   },
   {
-    title: 'paths',
-    style: {
-      width: '80px',
-      marginTop: '20px'
-    }
+    title: 'path',
+    isFound: false,
+    isFlipped: false,
   },
   {
     title: 'periscope',
-    style: {
-      width: '80px',
-      marginTop: '20px'
-    }
+    isFound: false,
+    isFlipped: false,
   },
   {
     title: 'reddit',
-    style: {
-      width: '80px',
-      marginTop: '20px'
-    }
+    isFound: false,
+    isFlipped: false,
   },
   {
     title: 'skype',
-    style: {
-      width: '80px',
-      marginTop: '20px'
-    }
+    isFound: false,
+    isFlipped: false,
   },
   {
     title: 'soundcloud',
-    style: {
-      width: '80px',
-      marginTop: '20px'
-    }
+    isFound: false,
+    isFlipped: false,
   },
   {
     title: 'spotify',
-    style: {
-      width: '80px',
-      marginTop: '20px'
-    }
+    isFound: false,
+    isFlipped: false,
   },
   {
     title: 'tumblr',
-    style: {
-      width: '80px',
-      marginTop: '20px'
-    }
+    isFound: false,
+    isFlipped: false,
   },
   {
     title: 'twitter',
-    style: {
-      width: '80px',
-      marginTop: '20px'
-    }
+    isFound: false,
+    isFlipped: false,
   },
   {
     title: 'whatsapp',
-    style: {
-      width: '80px',
-      marginTop: '20px'
-    }
+    isFound: false,
+    isFlipped: false,
   },
   {
     title: 'youtube',
-    style: {
-      width: '80px',
-      marginTop: '20px'
-    }
+    isFound: false,
+    isFlipped: false,
   }
 ]

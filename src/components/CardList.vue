@@ -1,23 +1,34 @@
 <script setup lang="ts">
 import useCardItems from '@/composable/useCardItems'
-import { onMounted } from 'vue'
+import { onMounted, defineEmits } from 'vue'
+import type { Card } from '@/mocks/cards/cards'
+const { cardItems, shuffleCards } = useCardItems
+const emit = defineEmits(['selected'])
 
-const { cardItems, generateRandomItems } = useCardItems
+const selectedCart = (item: Card) => {
+  if (item.isFound || item.isFlipped) return
+  item.isFlipped = !item.isFlipped
+  emit('selected', item)
+}
 
 onMounted(() => {
-  generateRandomItems()
+  shuffleCards()
 })
 </script>
 
 <template>
   <ul>
-    <li v-for="item in cardItems" :key="item.title">
-      <div class="card">
+    <li v-for="item in cardItems" :key="item.id">
+      <div
+        class="card"
+        :class="{ 'is-flipped': item.isFlipped || item.isFound }"
+        @click="selectedCart(item)"
+      >
         <div class="card__face card__face--front">
-          <img :src="`/images/question.png`" alt="question" width="80" />
+          <img :src="`/images/question.png`" alt="question" />
         </div>
         <div class="card__face card__face--back">
-          <img :src="`/images/${item.title}.png`" :alt="item.title" :style="item.style" />
+          <img :src="`/images/${item.title}.png`" :alt="item.title" />
         </div>
       </div>
     </li>
@@ -31,6 +42,11 @@ ul {
   list-style-type: none;
   gap: 10px;
   padding-left: 0;
+}
+
+img {
+  width: 80px;
+  border-radius: 5px 5px 0 0;
 }
 
 .card {
@@ -65,11 +81,8 @@ ul {
   transform: rotateY(180deg);
 }
 
-.card img {
-  border-radius: 5px 5px 0 0;
-}
-
 .card:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
+
 </style>
