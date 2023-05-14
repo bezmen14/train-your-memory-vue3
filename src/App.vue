@@ -3,8 +3,16 @@ import CardList from '@/components/CardList.vue'
 </script>
 
 <template>
-  <h1>Тренируй память</h1>
-  <CardList />
+  <div class="container">
+    <h1>Тренируй память</h1>
+    <CardList />
+  </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+</style>
