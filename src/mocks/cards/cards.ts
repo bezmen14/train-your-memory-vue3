@@ -1,66 +1,110 @@
 import type { Card } from '@/mocks/cards/type'
 
-export const cards: Card[] = [
+export const cards = <Card[]>[
   {
-    title: 'Adverts',
-    icon: require('@/assets/icons/adverts.svg')
+    title: 'buffer',
+    style: {
+      width: '80px',
+      marginTop: '20px'
+    }
   },
   {
-    title: 'Apps',
-    icon: require('@/assets/icons/apps.svg')
+    title: 'facebook',
+    style: {
+      width: '80px',
+      marginTop: '20px'
+    }
   },
   {
-    title: 'Code',
-    icon: require('@/assets/icons/code.svg')
+    title: 'instagram',
+    style: {
+      width: '80px',
+      marginTop: '20px'
+    }
   },
   {
-    title: 'Graph',
-    icon: require('@/assets/icons/graph.svg')
+    title: 'linkedin',
+    style: {
+      width: '80px',
+      marginTop: '20px'
+    }
   },
   {
-    title: 'Link',
-    icon: require('@/assets/icons/link.svg')
+    title: 'medium',
+    style: {
+      width: '80px',
+      marginTop: '20px'
+    }
   },
   {
-    title: 'Links',
-    icon: require('@/assets/icons/links.svg')
+    title: 'paths',
+    style: {
+      width: '80px',
+      marginTop: '20px'
+    }
   },
   {
-    title: 'Monitor',
-    icon: require('@/assets/icons/monitor.svg')
+    title: 'periscope',
+    style: {
+      width: '80px',
+      marginTop: '20px'
+    }
   },
   {
-    title: 'Notes',
-    icon: require('@/assets/icons/notes.svg')
+    title: 'reddit',
+    style: {
+      width: '80px',
+      marginTop: '20px'
+    }
   },
   {
-    title: 'Point',
-    icon: require('@/assets/icons/point.svg')
+    title: 'skype',
+    style: {
+      width: '80px',
+      marginTop: '20px'
+    }
   },
   {
-    title: 'Screen',
-    icon: require('@/assets/icons/screen.svg')
+    title: 'soundcloud',
+    style: {
+      width: '80px',
+      marginTop: '20px'
+    }
   },
   {
-    title: 'Search',
-    icon: require('@/assets/icons/search.svg')
+    title: 'spotify',
+    style: {
+      width: '80px',
+      marginTop: '20px'
+    }
   },
   {
-    title: 'Server',
-    icon: require('@/assets/icons/server.svg')
+    title: 'tumblr',
+    style: {
+      width: '80px',
+      marginTop: '20px'
+    }
   },
   {
-    title: 'Shapes',
-    icon: require('@/assets/icons/shapes.svg')
+    title: 'twitter',
+    style: {
+      width: '80px',
+      marginTop: '20px'
+    }
   },
   {
-    title: 'Share',
-    icon: require('@/assets/icons/share.svg')
+    title: 'whatsapp',
+    style: {
+      width: '80px',
+      marginTop: '20px'
+    }
   },
   {
-    title: 'Touch',
-    icon: require('@/assets/icons/touch.svg')
+    title: 'youtube',
+    style: {
+      width: '80px',
+      marginTop: '20px'
+    }
   },
-]
 
-console.log(cards.length)
+]

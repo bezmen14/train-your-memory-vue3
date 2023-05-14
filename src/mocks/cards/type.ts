@@ -1,4 +1,4 @@
 export type Card = {
   title: string
-  icon: string
+  style: { width: string; marginTop?: string }
 }
